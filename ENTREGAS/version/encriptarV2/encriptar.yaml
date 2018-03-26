@@ -1,0 +1,28 @@
+#      Licensed Materials - Property of IBM
+#
+#      © IBM Corp. 2016
+
+policy: 1.0.0
+
+info:
+  title: Encriptar datos
+  name: encriptar
+  version: 1.0.0
+  description: Encriptar datos
+  contact:
+        name: Jose Joaquin de la Gala Gonzalez
+
+attach:
+    - rest
+    - soap
+
+properties:
+    $schema: "http://json-schema.org/draft-04/schema#"
+    type: object
+    properties:
+        secreto:
+            label: Secreto
+            description: Clave privada de encriptacion simetrica
+            type: string
+gateways:
+    - datapower-gateway
