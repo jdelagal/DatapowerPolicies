@@ -1,0 +1,990 @@
+{
+	"id": "70a153eb-975d-22a4-5656-a055dc7dfd85",
+	"name": "Mexico",
+	"description": "",
+	"order": [
+		"af830a64-923a-3b33-d2b6-4ec3e5844403",
+		"06d20987-3444-9abe-9181-d6b5f84962ac",
+		"0fb49d94-fd3c-2f84-6564-62fd1fdae006",
+		"8f9e7b15-0415-5d25-a35c-c6a96531aeee"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1508154308351,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "06d20987-3444-9abe-9181-d6b5f84962ac",
+			"headers": "//X-IBM-APIManagement-Context: factoriatcpsi.dev\n//Authorization: \n",
+			"headerData": [
+				{
+					"key": "X-IBM-APIManagement-Context",
+					"value": "factoriatcpsi.dev",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "https://datapower/factoriaustglobal/sb/jose/current",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1521731926193,
+			"name": "/weather",
+			"description": "",
+			"collectionId": "70a153eb-975d-22a4-5656-a055dc7dfd85",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 46,
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "false",
+							"name": "Access-Control-Allow-Credentials",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Sep 2017 10:52:39 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(6.1.26)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK",
+							"name": "X-Backside-Transport",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "78433",
+							"name": "X-Global-Transaction-ID",
+							"description": "Custom header"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\n  \"return\": {\n    \"result\": \"true\",\n    \"error_code\": \"0\",\n    \"building_list\": [\n      {\n        \"bl_id\": \"ES.BOA.AL\",\n        \"bl_name\": \"ALHAMBRA\",\n        \"country_id\": \"ESP\",\n        \"country_name\": \"Espa?a\",\n        \"region_id\": \"M\",\n        \"region_name\": \"Comunidad de Madrid\",\n        \"state_id\": \"ES.M\",\n        \"state_name\": \"Madrid\",\n        \"city_id\": \"ES.BOA\",\n        \"city_name\": \"Boadilla del Monte\",\n        \"site_id\": \"C.A.M.\",\n        \"address1\": \"Avda. de Cantabria, S/N\",\n        \"address2\": \"BOADILLA DEL MONTE (MADRID)\",\n        \"zip\": \"28660\",\n        \"lon\": 0,\n        \"lan\": 0\n      }\n    ]\n  }\n}",
+					"language": "json",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"code": 200,
+					"responseSize": {
+						"body": 625,
+						"header": 494,
+						"total": 1119
+					},
+					"mimeType": "text",
+					"fileName": "response.json",
+					"dataURI": "data:application/json;base64, ewogICJyZXR1cm4iOiB7CiAgICAicmVzdWx0IjogInRydWUiLAogICAgImVycm9yX2NvZGUiOiAiMCIsCiAgICAiYnVpbGRpbmdfbGlzdCI6IFsKICAgICAgewogICAgICAgICJibF9pZCI6ICJFUy5CT0EuQUwiLAogICAgICAgICJibF9uYW1lIjogIkFMSEFNQlJBIiwKICAgICAgICAiY291bnRyeV9pZCI6ICJFU1AiLAogICAgICAgICJjb3VudHJ5X25hbWUiOiAiRXNwYT9hIiwKICAgICAgICAicmVnaW9uX2lkIjogIk0iLAogICAgICAgICJyZWdpb25fbmFtZSI6ICJDb211bmlkYWQgZGUgTWFkcmlkIiwKICAgICAgICAic3RhdGVfaWQiOiAiRVMuTSIsCiAgICAgICAgInN0YXRlX25hbWUiOiAiTWFkcmlkIiwKICAgICAgICAiY2l0eV9pZCI6ICJFUy5CT0EiLAogICAgICAgICJjaXR5X25hbWUiOiAiQm9hZGlsbGEgZGVsIE1vbnRlIiwKICAgICAgICAic2l0ZV9pZCI6ICJDLkEuTS4iLAogICAgICAgICJhZGRyZXNzMSI6ICJBdmRhLiBkZSBDYW50YWJyaWEsIFMvTiIsCiAgICAgICAgImFkZHJlc3MyIjogIkJPQURJTExBIERFTCBNT05URSAoTUFEUklEKSIsCiAgICAgICAgInppcCI6ICIyODY2MCIsCiAgICAgICAgImxvbiI6IDAsCiAgICAgICAgImxhbiI6IDAKICAgICAgfQogICAgXQogIH0KfQ==",
+					"name": "/buildings",
+					"id": "02c934b9-4288-331e-a8bb-718795c7ab12",
+					"request": "06d20987-3444-9abe-9181-d6b5f84962ac",
+					"requestObject": {
+						"url": "https://datapower/factoriatcpsi/dev/rest/buildings?country=ESP&building=ES.BOA.AL&user_id=N96907",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [
+							{
+								"key": "country",
+								"value": "ESP",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "building",
+								"value": "ES.BOA.AL",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "user_id",
+								"value": "N96907",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							}
+						],
+						"headerData": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "accept-language",
+								"value": "es-ES",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{X-IBM-Client-Id}}",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Global-Id",
+								"value": "X-Santander-Global-Id",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Device",
+								"value": "X-Santander-Device",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Channel",
+								"value": "X-Santander-Channel",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							}
+						],
+						"headers": "content-type: application/json\naccept: application/json\naccept-language: es-ES\nx-ibm-client-id: {{X-IBM-Client-Id}}\nAuthorization: Bearer {{access_token}}\nX-Santander-Global-Id: X-Santander-Global-Id\nX-Santander-Device: X-Santander-Device\nX-Santander-Channel: X-Santander-Channel\n",
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "0fb49d94-fd3c-2f84-6564-62fd1fdae006",
+			"headers": "//X-IBM-APIManagement-Context: factoriatcpsi.dev\n//Authorization: \nAccept: application/json\nx-ibm-client-id: {{client_id}}\n",
+			"headerData": [
+				{
+					"key": "X-IBM-APIManagement-Context",
+					"value": "factoriatcpsi.dev",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "x-ibm-client-id",
+					"value": "{{client_id}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://datapower/factoriaustglobal/sb/jose/current",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [
+				{
+					"key": "campo1",
+					"value": "hola",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1521731977366,
+			"name": "/desencriptar",
+			"description": "",
+			"collectionId": "70a153eb-975d-22a4-5656-a055dc7dfd85",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 46,
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "false",
+							"name": "Access-Control-Allow-Credentials",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Sep 2017 10:52:39 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(6.1.26)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK",
+							"name": "X-Backside-Transport",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "78433",
+							"name": "X-Global-Transaction-ID",
+							"description": "Custom header"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\n  \"return\": {\n    \"result\": \"true\",\n    \"error_code\": \"0\",\n    \"building_list\": [\n      {\n        \"bl_id\": \"ES.BOA.AL\",\n        \"bl_name\": \"ALHAMBRA\",\n        \"country_id\": \"ESP\",\n        \"country_name\": \"Espa?a\",\n        \"region_id\": \"M\",\n        \"region_name\": \"Comunidad de Madrid\",\n        \"state_id\": \"ES.M\",\n        \"state_name\": \"Madrid\",\n        \"city_id\": \"ES.BOA\",\n        \"city_name\": \"Boadilla del Monte\",\n        \"site_id\": \"C.A.M.\",\n        \"address1\": \"Avda. de Cantabria, S/N\",\n        \"address2\": \"BOADILLA DEL MONTE (MADRID)\",\n        \"zip\": \"28660\",\n        \"lon\": 0,\n        \"lan\": 0\n      }\n    ]\n  }\n}",
+					"language": "json",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"code": 200,
+					"responseSize": {
+						"body": 625,
+						"header": 494,
+						"total": 1119
+					},
+					"mimeType": "text",
+					"fileName": "response.json",
+					"dataURI": "data:application/json;base64, ewogICJyZXR1cm4iOiB7CiAgICAicmVzdWx0IjogInRydWUiLAogICAgImVycm9yX2NvZGUiOiAiMCIsCiAgICAiYnVpbGRpbmdfbGlzdCI6IFsKICAgICAgewogICAgICAgICJibF9pZCI6ICJFUy5CT0EuQUwiLAogICAgICAgICJibF9uYW1lIjogIkFMSEFNQlJBIiwKICAgICAgICAiY291bnRyeV9pZCI6ICJFU1AiLAogICAgICAgICJjb3VudHJ5X25hbWUiOiAiRXNwYT9hIiwKICAgICAgICAicmVnaW9uX2lkIjogIk0iLAogICAgICAgICJyZWdpb25fbmFtZSI6ICJDb211bmlkYWQgZGUgTWFkcmlkIiwKICAgICAgICAic3RhdGVfaWQiOiAiRVMuTSIsCiAgICAgICAgInN0YXRlX25hbWUiOiAiTWFkcmlkIiwKICAgICAgICAiY2l0eV9pZCI6ICJFUy5CT0EiLAogICAgICAgICJjaXR5X25hbWUiOiAiQm9hZGlsbGEgZGVsIE1vbnRlIiwKICAgICAgICAic2l0ZV9pZCI6ICJDLkEuTS4iLAogICAgICAgICJhZGRyZXNzMSI6ICJBdmRhLiBkZSBDYW50YWJyaWEsIFMvTiIsCiAgICAgICAgImFkZHJlc3MyIjogIkJPQURJTExBIERFTCBNT05URSAoTUFEUklEKSIsCiAgICAgICAgInppcCI6ICIyODY2MCIsCiAgICAgICAgImxvbiI6IDAsCiAgICAgICAgImxhbiI6IDAKICAgICAgfQogICAgXQogIH0KfQ==",
+					"name": "/buildings",
+					"id": "be2a81ce-781a-756f-0183-96ccc95b3882",
+					"request": "0fb49d94-fd3c-2f84-6564-62fd1fdae006",
+					"requestObject": {
+						"url": "https://datapower/factoriatcpsi/dev/rest/buildings?country=ESP&building=ES.BOA.AL&user_id=N96907",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [
+							{
+								"key": "country",
+								"value": "ESP",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "building",
+								"value": "ES.BOA.AL",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "user_id",
+								"value": "N96907",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							}
+						],
+						"headerData": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "accept-language",
+								"value": "es-ES",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{X-IBM-Client-Id}}",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Global-Id",
+								"value": "X-Santander-Global-Id",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Device",
+								"value": "X-Santander-Device",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Channel",
+								"value": "X-Santander-Channel",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							}
+						],
+						"headers": "content-type: application/json\naccept: application/json\naccept-language: es-ES\nx-ibm-client-id: {{X-IBM-Client-Id}}\nAuthorization: Bearer {{access_token}}\nX-Santander-Global-Id: X-Santander-Global-Id\nX-Santander-Device: X-Santander-Device\nX-Santander-Channel: X-Santander-Channel\n",
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "8f9e7b15-0415-5d25-a35c-c6a96531aeee",
+			"headers": "//X-IBM-APIManagement-Context: factoriatcpsi.dev\n//Authorization: \n",
+			"headerData": [
+				{
+					"key": "X-IBM-APIManagement-Context",
+					"value": "factoriatcpsi.dev",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "https://api.eu.apiconnect.ibmcloud.com/bluemixtestingjosegmailcom-dev/sb/current",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1521545222531,
+			"name": "/weather_bluemix",
+			"description": "",
+			"collectionId": "70a153eb-975d-22a4-5656-a055dc7dfd85",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 46,
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "false",
+							"name": "Access-Control-Allow-Credentials",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Sep 2017 10:52:39 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(6.1.26)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK",
+							"name": "X-Backside-Transport",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "78433",
+							"name": "X-Global-Transaction-ID",
+							"description": "Custom header"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\n  \"return\": {\n    \"result\": \"true\",\n    \"error_code\": \"0\",\n    \"building_list\": [\n      {\n        \"bl_id\": \"ES.BOA.AL\",\n        \"bl_name\": \"ALHAMBRA\",\n        \"country_id\": \"ESP\",\n        \"country_name\": \"Espa?a\",\n        \"region_id\": \"M\",\n        \"region_name\": \"Comunidad de Madrid\",\n        \"state_id\": \"ES.M\",\n        \"state_name\": \"Madrid\",\n        \"city_id\": \"ES.BOA\",\n        \"city_name\": \"Boadilla del Monte\",\n        \"site_id\": \"C.A.M.\",\n        \"address1\": \"Avda. de Cantabria, S/N\",\n        \"address2\": \"BOADILLA DEL MONTE (MADRID)\",\n        \"zip\": \"28660\",\n        \"lon\": 0,\n        \"lan\": 0\n      }\n    ]\n  }\n}",
+					"language": "json",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"code": 200,
+					"responseSize": {
+						"body": 625,
+						"header": 494,
+						"total": 1119
+					},
+					"mimeType": "text",
+					"fileName": "response.json",
+					"dataURI": "data:application/json;base64, ewogICJyZXR1cm4iOiB7CiAgICAicmVzdWx0IjogInRydWUiLAogICAgImVycm9yX2NvZGUiOiAiMCIsCiAgICAiYnVpbGRpbmdfbGlzdCI6IFsKICAgICAgewogICAgICAgICJibF9pZCI6ICJFUy5CT0EuQUwiLAogICAgICAgICJibF9uYW1lIjogIkFMSEFNQlJBIiwKICAgICAgICAiY291bnRyeV9pZCI6ICJFU1AiLAogICAgICAgICJjb3VudHJ5X25hbWUiOiAiRXNwYT9hIiwKICAgICAgICAicmVnaW9uX2lkIjogIk0iLAogICAgICAgICJyZWdpb25fbmFtZSI6ICJDb211bmlkYWQgZGUgTWFkcmlkIiwKICAgICAgICAic3RhdGVfaWQiOiAiRVMuTSIsCiAgICAgICAgInN0YXRlX25hbWUiOiAiTWFkcmlkIiwKICAgICAgICAiY2l0eV9pZCI6ICJFUy5CT0EiLAogICAgICAgICJjaXR5X25hbWUiOiAiQm9hZGlsbGEgZGVsIE1vbnRlIiwKICAgICAgICAic2l0ZV9pZCI6ICJDLkEuTS4iLAogICAgICAgICJhZGRyZXNzMSI6ICJBdmRhLiBkZSBDYW50YWJyaWEsIFMvTiIsCiAgICAgICAgImFkZHJlc3MyIjogIkJPQURJTExBIERFTCBNT05URSAoTUFEUklEKSIsCiAgICAgICAgInppcCI6ICIyODY2MCIsCiAgICAgICAgImxvbiI6IDAsCiAgICAgICAgImxhbiI6IDAKICAgICAgfQogICAgXQogIH0KfQ==",
+					"name": "/buildings",
+					"id": "91d352e3-6f50-31dc-0a46-26406d8acfe5",
+					"request": "8f9e7b15-0415-5d25-a35c-c6a96531aeee",
+					"requestObject": {
+						"url": "https://datapower/factoriatcpsi/dev/rest/buildings?country=ESP&building=ES.BOA.AL&user_id=N96907",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [
+							{
+								"key": "country",
+								"value": "ESP",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "building",
+								"value": "ES.BOA.AL",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "user_id",
+								"value": "N96907",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							}
+						],
+						"headerData": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "accept-language",
+								"value": "es-ES",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{X-IBM-Client-Id}}",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Global-Id",
+								"value": "X-Santander-Global-Id",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Device",
+								"value": "X-Santander-Device",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Channel",
+								"value": "X-Santander-Channel",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							}
+						],
+						"headers": "content-type: application/json\naccept: application/json\naccept-language: es-ES\nx-ibm-client-id: {{X-IBM-Client-Id}}\nAuthorization: Bearer {{access_token}}\nX-Santander-Global-Id: X-Santander-Global-Id\nX-Santander-Device: X-Santander-Device\nX-Santander-Channel: X-Santander-Channel\n",
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "af830a64-923a-3b33-d2b6-4ec3e5844403",
+			"headers": "X-IBM-APIManagement-Context: factoriatcpsi.dev\nAuthorization: Basic ampkZWxhZ2FsYUB0Y3BzaS5lczohbjByMXQ1QEM=\n",
+			"headerData": [
+				{
+					"key": "X-IBM-APIManagement-Context",
+					"value": "factoriatcpsi.dev",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic ampkZWxhZ2FsYUB0Y3BzaS5lczohbjByMXQ1QEM=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://apim/v1/portal/orgs/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508260034763,
+			"name": "/buildings copy",
+			"description": "",
+			"collectionId": "70a153eb-975d-22a4-5656-a055dc7dfd85",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 46,
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "false",
+							"name": "Access-Control-Allow-Credentials",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "APIm-Debug-Trans-Id, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-Global-Transaction-ID",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Sep 2017 10:52:39 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(6.1.26)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "X-Backside-Transport",
+							"value": "OK OK",
+							"name": "X-Backside-Transport",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Global-Transaction-ID",
+							"value": "78433",
+							"name": "X-Global-Transaction-ID",
+							"description": "Custom header"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\n  \"return\": {\n    \"result\": \"true\",\n    \"error_code\": \"0\",\n    \"building_list\": [\n      {\n        \"bl_id\": \"ES.BOA.AL\",\n        \"bl_name\": \"ALHAMBRA\",\n        \"country_id\": \"ESP\",\n        \"country_name\": \"Espa?a\",\n        \"region_id\": \"M\",\n        \"region_name\": \"Comunidad de Madrid\",\n        \"state_id\": \"ES.M\",\n        \"state_name\": \"Madrid\",\n        \"city_id\": \"ES.BOA\",\n        \"city_name\": \"Boadilla del Monte\",\n        \"site_id\": \"C.A.M.\",\n        \"address1\": \"Avda. de Cantabria, S/N\",\n        \"address2\": \"BOADILLA DEL MONTE (MADRID)\",\n        \"zip\": \"28660\",\n        \"lon\": 0,\n        \"lan\": 0\n      }\n    ]\n  }\n}",
+					"language": "json",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"code": 200,
+					"responseSize": {
+						"body": 625,
+						"header": 494,
+						"total": 1119
+					},
+					"mimeType": "text",
+					"fileName": "response.json",
+					"dataURI": "data:application/json;base64, ewogICJyZXR1cm4iOiB7CiAgICAicmVzdWx0IjogInRydWUiLAogICAgImVycm9yX2NvZGUiOiAiMCIsCiAgICAiYnVpbGRpbmdfbGlzdCI6IFsKICAgICAgewogICAgICAgICJibF9pZCI6ICJFUy5CT0EuQUwiLAogICAgICAgICJibF9uYW1lIjogIkFMSEFNQlJBIiwKICAgICAgICAiY291bnRyeV9pZCI6ICJFU1AiLAogICAgICAgICJjb3VudHJ5X25hbWUiOiAiRXNwYT9hIiwKICAgICAgICAicmVnaW9uX2lkIjogIk0iLAogICAgICAgICJyZWdpb25fbmFtZSI6ICJDb211bmlkYWQgZGUgTWFkcmlkIiwKICAgICAgICAic3RhdGVfaWQiOiAiRVMuTSIsCiAgICAgICAgInN0YXRlX25hbWUiOiAiTWFkcmlkIiwKICAgICAgICAiY2l0eV9pZCI6ICJFUy5CT0EiLAogICAgICAgICJjaXR5X25hbWUiOiAiQm9hZGlsbGEgZGVsIE1vbnRlIiwKICAgICAgICAic2l0ZV9pZCI6ICJDLkEuTS4iLAogICAgICAgICJhZGRyZXNzMSI6ICJBdmRhLiBkZSBDYW50YWJyaWEsIFMvTiIsCiAgICAgICAgImFkZHJlc3MyIjogIkJPQURJTExBIERFTCBNT05URSAoTUFEUklEKSIsCiAgICAgICAgInppcCI6ICIyODY2MCIsCiAgICAgICAgImxvbiI6IDAsCiAgICAgICAgImxhbiI6IDAKICAgICAgfQogICAgXQogIH0KfQ==",
+					"name": "/buildings",
+					"id": "585aed74-6000-a61c-4d8d-4ad6ae1a14e3",
+					"request": "4d1999b6-c622-9511-940c-abc338969876",
+					"requestObject": {
+						"url": "https://datapower/factoriatcpsi/dev/rest/buildings?country=ESP&building=ES.BOA.AL&user_id=N96907",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [
+							{
+								"key": "country",
+								"value": "ESP",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "building",
+								"value": "ES.BOA.AL",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							},
+							{
+								"key": "user_id",
+								"value": "N96907",
+								"equals": true,
+								"description": "",
+								"enabled": true
+							}
+						],
+						"headerData": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "accept-language",
+								"value": "es-ES",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "x-ibm-client-id",
+								"value": "{{X-IBM-Client-Id}}",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Global-Id",
+								"value": "X-Santander-Global-Id",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Device",
+								"value": "X-Santander-Device",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "X-Santander-Channel",
+								"value": "X-Santander-Channel",
+								"type": "text",
+								"enabled": true,
+								"description": "",
+								"disabled": false
+							}
+						],
+						"headers": "content-type: application/json\naccept: application/json\naccept-language: es-ES\nx-ibm-client-id: {{X-IBM-Client-Id}}\nAuthorization: Bearer {{access_token}}\nX-Santander-Global-Id: X-Santander-Global-Id\nX-Santander-Device: X-Santander-Device\nX-Santander-Channel: X-Santander-Channel\n",
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		}
+	]
+}

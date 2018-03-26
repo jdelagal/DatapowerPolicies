@@ -1,0 +1,181 @@
+---
+swagger: "2.0"
+info:
+  x-ibm-name: "encriptador"
+  title: "encriptador"
+  version: "1.0.0"
+schemes:
+- "https"
+host: "$(catalog.host)"
+basePath: "/jose"
+paths:
+  /current:
+    get:
+      summary: "Current Weather"
+      parameters:
+      - name: "zipcode"
+        in: "query"
+        description: "A valid 5-digit US zip code"
+        required: true
+        type: "string"
+      - $ref: "#/parameters/paramGenerico1"
+      - $ref: "#/parameters/paramGenerico2"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Current"
+  /today: {}
+definitions:
+  Current:
+    type: "object"
+    properties:
+      zip:
+        type: "string"
+      temperature:
+        type: "integer"
+      humidity:
+        type: "integer"
+      city:
+        type: "string"
+      state:
+        type: "string"
+x-ibm-configuration:
+  enforced: true
+  testable: true
+  phase: "realized"
+  cors:
+    enabled: true
+  assembly:
+    execute:
+    - invoke:
+        title: "invoke-current"
+        timeout: 60
+        verb: "GET"
+        cache-response: "protocol"
+        cache-ttl: 900
+        version: "1.0.0"
+        target-url: "https://myweatherprovider.mybluemix.net/current?zipcode=$(request.parameters.zipcode)"
+    - gatewayscript:
+        title: "gatewayscript"
+        version: "1.0.0"
+        source: "//get the runtime API context\r\nvar json = apim.getvariable('message');\r\
+          \nconsole.info(\"json %s\", JSON.stringify(json));\r\n\r\n/*\r\n  Licensed\
+          \ Materials - Property of IBM\r\n  IBM WebSphere DataPower Appliances\r\n\
+          \  Copyright IBM Corporation 2014. All Rights Reserved.\r\n  US Government\
+          \ Users Restricted Rights - Use, duplication or disclosure\r\n  restricted\
+          \ by GSA ADP Schedule Contract with IBM Corp.\r\n */\r\n\r\nvar xmlString\
+          \ = \r\n            '<?xml version=\"1.0\"?>' +\r\n            '<library\
+          \ ' +\r\n            '  xmlns:hr=\"http://w3.ibm.com/hr\" >' +\r\n     \
+          \       '<book id=\"1\">' +\r\n            '  <title>DataPower Admin</title>'\
+          \ +\r\n            '  <hr:author hr:id=\"auth1\">Hermann</hr:author>' +\r\
+          \n            '</book>' +\r\n            '<book id=\"2\">' +\r\n       \
+          \     '  <title>DataPower Development</title>' +\r\n            '  <hr:author\
+          \ hr:id=\"auth2\">Tim</hr:author>' +\r\n            '</book>' +\r\n    \
+          \        '<book id=\"3\">' +\r\n            '  <title>DataPower Capacity</title>'\
+          \ +\r\n            '  <hr:author hr:id=\"auth3\">Jimmy</hr:author>' +\r\n\
+          \            '</book>' +\r\n            '</library>';\r\n\r\n\r\nvar domTree\
+          \ = undefined;\r\nvar docElement = undefined;\r\ndomTree = XML.parse(xmlString);\r\
+          \nvar jsonFormat;\r\ntry {\r\n    // use XML.parse() to parse the xmlString\
+          \ into a DOM tree structure\r\n    domTree = XML.parse(xmlString);\r\n \
+          \   docElement = domTree.documentElement\r\n    //jsonFormat = JSON.stringify(xmlToJson(domTree));\r\
+          \n    jsonFormat = xmlToJson(domTree);\r\n} catch (error) {\r\n    // there\
+          \ was an error while parsing the XML string\r\n    console.error('error\
+          \ parsing XML string ' + error);\r\n    throw error;\r\n}\r\n\r\n\r\n/**\r\
+          \n *  Traverse the XML tree and find out the titles\r\n *\r\n *  @return\
+          \ all the found titles in an Array\r\n */\r\nfunction getTitlesByTraverseXmlTree()\
+          \ {\r\n    var title = new Array();\r\n\r\n    var traverseStack = new Array();\r\
+          \n    // do tree traversing starting from the DOM tree documentElement\r\
+          \n    traverseStack.push(domTree.documentElement); \r\n    while (traverseStack.length\
+          \ > 0) {\r\n        var node = traverseStack.pop();\r\n        // we focus\
+          \ on ELEMENT nodes whose tagName is 'title'\r\n        if (node.nodeType\
+          \ === Node.ELEMENT_NODE && node.tagName === 'title') {\r\n            title.push(node.textContent);\r\
+          \n        }\r\n        if (node.nextSibling) {\r\n            traverseStack.push(node.nextSibling);\r\
+          \n        }\r\n        if (node.firstChild) {\r\n            traverseStack.push(node.firstChild);\r\
+          \n        }\r\n    }\r\n    return title;\r\n}\r\n\r\n/**\r\n *  Use DOM's\
+          \ node.getElementsByTagNameNS() API to find all author information\r\n *\r\
+          \n *  @return all the found authors in an Array\r\n */\r\nfunction getAuthorsByGetElementsAPI()\
+          \ {\r\n    var author = new Array();\r\n    // find all Element nodes who's\
+          \ local name is author and namespace is w3.ibm.com/hr\r\n    var nodelist\
+          \ = domTree.getElementsByTagNameNS('http://w3.ibm.com/hr', 'author');\r\n\
+          \    for (var c=0; c<nodelist.length; c++) {\r\n        author.push(nodelist.item(c).textContent);\r\
+          \n    }\r\n    return author;\r\n}\r\n\r\n// find out all titles and authors,\
+          \ and write the found titles/authors to output\r\nvar titles = getTitlesByTraverseXmlTree();\r\
+          \n\r\nvar authors = getAuthorsByGetElementsAPI();\r\n\r\n//json.body.platform\
+          \ = authors[0];\r\n//json.body.platform = typeof(docElement.ownerDocument);\r\
+          \n//json.body.platform = typeof(jsonFormat);   \r\njson.body.platform =\
+          \ jsonFormat;\r\n//set the runtime API context\r\napim.setvariable('message.body',\
+          \ json.body);\r\n\r\n// Changes XML to JSON\r\nfunction xmlToJson(xml) {\r\
+          \n    \r\n    // Create the return object\r\n    var obj = {};\r\n\r\n \
+          \   if (xml.nodeType == 1) { // element\r\n        // do attributes\r\n\
+          \        if (xml.attributes.length > 0) {\r\n        obj[\"@attributes\"\
+          ] = {};\r\n            for (var j = 0; j < xml.attributes.length; j++) {\r\
+          \n                var attribute = xml.attributes.item(j);\r\n          \
+          \      obj[\"@attributes\"][attribute.nodeName] = attribute.nodeValue;\r\
+          \n            }\r\n        }\r\n    } else if (xml.nodeType == 3) { // text\r\
+          \n        obj = xml.nodeValue;\r\n    }\r\n\r\n    // do children\r\n  \
+          \  if (xml.hasChildNodes()) {\r\n        for(var i = 0; i < xml.childNodes.length;\
+          \ i++) {\r\n            var item = xml.childNodes.item(i);\r\n         \
+          \   var nodeName = item.nodeName;\r\n            if (typeof(obj[nodeName])\
+          \ == \"undefined\") {\r\n                obj[nodeName] = xmlToJson(item);\r\
+          \n            } else {\r\n                if (typeof(obj[nodeName].push)\
+          \ == \"undefined\") {\r\n                    var old = obj[nodeName];\r\n\
+          \                    obj[nodeName] = [];\r\n                    obj[nodeName].push(old);\r\
+          \n                }\r\n                obj[nodeName].push(xmlToJson(item));\r\
+          \n            }\r\n        }\r\n    }\r\n    return obj;\r\n};\r\n"
+    - encriptar:
+        version: "1.0.0"
+    - desencriptar:
+        version: "1.0.0"
+    - gatewayscript:
+        title: "seteo"
+        version: "1.0.0"
+        source: "var out = {};\nvar payload = apim.getvariable('message.body');\n\n\
+          out.body = payload;\n\napim.output('application/json');\nsession.output.write(out);"
+    catch:
+    - errors: []
+      execute:
+      - gatewayscript:
+          title: "printVariables"
+          version: "1.0.0"
+          source: "var out = {};\nout.msg = \"VARIABLES API CONNECT\";\nvar vapi =\
+            \ apim.getvariable('api');\nvar vplan = apim.getvariable('plan');\nvar\
+            \ vclient = apim.getvariable('client');\nvar vrequest = apim.getvariable('request');\n\
+            var venv = apim.getvariable('env');\nvar vmessege = apim.getvariable('message');\n\
+            //Esto es necesario message.body, si no el body no se muestra;\nvar voauth\
+            \ = apim.getvariable('oauth');\n\n//Todas las funciones de System\nvar\
+            \ datetime=apim.getvariable('system.datetime');\nvar time=apim.getvariable('system.time');\n\
+            var timehour=apim.getvariable('system.time.hour');\nvar timeminute=apim.getvariable('system.time.minute');\n\
+            var timeseconds=apim.getvariable('system.time.seconds');\nvar date=apim.getvariable('system.date');\n\
+            var datedayofweek=apim.getvariable('system.date.day-of-week');\nvar datedayofmonth=apim.getvariable('system.date.day-of-month');\n\
+            var datemonth=apim.getvariable('system.date.month');\nvar dateyear=apim.getvariable('system.date.year');\n\
+            var timezone=apim.getvariable('system.timezone');\n\nvar vsystem = JSON.parse('{\\\
+            \"datetime\\\":\\\"' + datetime + \n'\\\",\\\"time\\\":\\\"' + time +\n\
+            '\\\",\\\"time.hour\\\":\\\"' + timehour + \n'\\\",\\\"time.minute\\\"\
+            :\\\"' + timeminute +\n'\\\",\\\"time.seconds\\\":\\\"' + timeseconds\
+            \ + \n'\\\",\\\"date\\\":\\\"' + date +\n'\\\",\\\"date.day-of-week\\\"\
+            :\\\"' + datedayofweek +\n'\\\",\\\"date.day-of-month\\\":\\\"' + datedayofmonth\
+            \ +\n'\\\",\\\"date.month\\\":\\\"' + datemonth +\n'\\\",\\\"date.year\\\
+            \":\\\"' + dateyear +\n'\\\",\\\"timezone\\\":\\\"' + timezone + '\\\"\
+            }');\n\nout.vapi = vapi;\nout.vplan = vplan;\nout.vclient = vclient;\n\
+            out.vrequest = vrequest;\nout.venv = venv;\nout.vmessege = vmessege;\n\
+            out.vsystem = vsystem;\nout.voauth = voauth;\n\napim.output('application/json');\n\
+            session.output.write(out);\n"
+    - errors: []
+      execute: []
+  gateway: "datapower-gateway"
+consumes:
+- "application/json"
+parameters:
+  paramGenerico1:
+    name: "paramGenerico1"
+    type: "string"
+    required: true
+    in: "query"
+    description: "paramGenerico1"
+  paramGenerico2:
+    name: "paramGenerico2"
+    type: "string"
+    required: true
+    in: "query"
+    description: "paramGenerico2"
